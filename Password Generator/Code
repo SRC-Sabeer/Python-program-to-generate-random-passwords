@@ -1,0 +1,18 @@
+import random # pip install random
+import string # pip install string
+print("Welcome to Password Generator Center")
+length = int(input("Enter the Length of the password   "))
+
+upper = string.ascii_uppercase # all the alphabets in capital
+lower = string.ascii_lowercase # all the alphabets in small
+numbers = string.digits # all the symbols from 0 to 9 
+symbols = string.punctuation # some of the symbols
+
+combination = lower + upper + numbers # I dont want to use symbols in my password
+# if you want to use so just append the variable symbols
+
+generator = random.sample(combination,length) # it will generate the password according to the length
+password = "".join(generator)
+# .join function joins all the items in a list
+print("The compatable Password we found is  ",password)
+#  now time to run the code
